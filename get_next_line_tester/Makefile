@@ -1,4 +1,4 @@
-CC		=	gcc
+CC		=	cc
 
 CFLAG	=	-Wall -Wextra -Werror -I $(DIR) 
 
@@ -10,7 +10,7 @@ SRC		=	$(addprefix $(DIR), $(FILES)) tester.c
 
 NAME	=	out
 
-BUFF	=	-D BUFFER_SIZE=4
+BUFF	=	-D BUFFER_SIZE=0
 
 all		: $(NAME)
 
