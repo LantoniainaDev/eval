@@ -6,16 +6,14 @@
 /*   By: eramanit <eramanit@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 06:56:41 by eramanit          #+#    #+#             */
-/*   Updated: 2025/03/29 07:34:26 by eramanit         ###   ########.fr       */
+/*   Updated: 2025/04/01 10:55:42 by eramanit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdio.h>
-#include <string.h>
 
-// printf("\033[32mBonjour\033[00m\n");
-// [ couleur m
-int main(void)
+void test(void)
 {
 	int c = 78;
 	char	*s = "N";
@@ -52,5 +50,12 @@ int main(void)
 	printf("le mix de types: \033[35m%%%s = %dd = %ii = %xx = %cc = %XX stocked dans: %p%%\033[00m/",
 			s, c, c, c,(char) c, c, &c);
 	puts("");
+}
+
+// printf("\033[32mBonjour\033[00m\n");
+// [ couleur m
+int main(void)
+{
+	ft_printf("12345");
 	return (0);
 }
