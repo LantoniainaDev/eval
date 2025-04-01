@@ -8,14 +8,20 @@ FILES	=	get_next_line_utils.c get_next_line.c
 
 SRC		=	$(addprefix $(DIR), $(FILES)) tester.c
 
-NAME	=	out
+SRC_B		=	$(addprefix $(DIR), $(FILES:.c=_bonus.c)) tester.c
 
-BUFF	=	-D BUFFER_SIZE=0
+NAME	=	out
+B	=	bo
+
+BUFF	=	-D BUFFER_SIZE=6
 
 all		: $(NAME)
 
 $(NAME)	:
 	$(CC) $(SRC) $(CFLAG) $(BUFF) -o $(NAME)
+
+$(B)	:
+	$(CC) $(SRC_B) $(CFLAG) $(BUFF) -o $(B)
 
 clean	: fclean
 
@@ -26,6 +32,9 @@ re		:	fclean all
 
 run		:
 	./$(NAME)
+
+bonus	: $(B)
+	./$(B) bonus
 
 val		:
 	valgrind ./$(NAME) -q --leak-check=full

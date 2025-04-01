@@ -6,7 +6,7 @@
 /*   By: eramanit <eramanit@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 21:27:29 by eramanit          #+#    #+#             */
-/*   Updated: 2025/03/29 04:53:38 by eramanit         ###   ########.fr       */
+/*   Updated: 2025/04/01 07:34:08 by eramanit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,41 @@ int	test3(void)
 	return (0);
 }
 
-int main(void)
+int	bonus_test(void)
 {
-	test1();
-	test2();
-	test3();
+	char	*s;
+	int		fd1;
+	int		fd2;
+
+	fd2 = open("file2", O_RDONLY);
+	fd1 = open("test", O_RDONLY);
+	s = get_next_line(fd1);
+	ft_display(s);
+	s = get_next_line(fd2);
+	ft_display(s);
+	while (s)
+	{
+		s = get_next_line(fd1);
+		ft_display(s);
+		s = get_next_line(fd2);
+		ft_display(s);
+	}
+	close(fd1);
+	close(fd2);
+	return (0);
+}
+
+int main(int ac, char **av)
+{
+	(void ) av;
+	if (ac < 2)
+	{
+		test1();
+		test2();
+		test3();
+	}
+	else
+		bonus_test();
 	return (0);
 }
 
