@@ -1,4 +1,4 @@
-CC		=	cc
+CC		=	gcc
 
 CFLAG	=	-Wall -Wextra -Werror -I $(DIR) 
 
@@ -13,20 +13,20 @@ SRC_B		=	$(addprefix $(DIR), $(FILES:.c=_bonus.c)) tester.c
 NAME	=	out
 B	=	bo
 
-BUFF	=	-D BUFFER_SIZE=6
+BUFF	=	-D BUFFER_SIZE=0
 
 all		: $(NAME)
 
 $(NAME)	:
-	$(CC) $(SRC) $(CFLAG) $(BUFF) -o $(NAME)
+	@$(CC) $(SRC) $(CFLAG) $(BUFF) -o $(NAME)
 
 $(B)	:
-	$(CC) $(SRC_B) $(CFLAG) $(BUFF) -o $(B)
+	@$(CC) $(SRC_B) $(CFLAG) $(BUFF) -o $(B)
 
 clean	: fclean
 
 fclean	:
-	rm -rf  $(NAME)
+	@rm -rf  $(NAME)
 
 re		:	fclean all
 
