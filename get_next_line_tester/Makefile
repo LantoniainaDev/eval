@@ -1,4 +1,4 @@
-CC		=	gcc
+CC		=	cc
 
 CFLAG	=	-Wall -Wextra -Werror -I $(DIR) 
 
@@ -13,7 +13,7 @@ SRC_B		=	$(addprefix $(DIR), $(FILES:.c=_bonus.c)) tester.c
 NAME	=	out
 B	=	bo
 
-BUFF	=	-D BUFFER_SIZE=0
+BUFF	=	-D BUFFER_SIZE=1
 
 all		: $(NAME)
 
