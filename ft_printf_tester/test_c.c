@@ -6,7 +6,7 @@
 /*   By: eramanit <eramanit@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 10:36:20 by eramanit          #+#    #+#             */
-/*   Updated: 2025/04/14 01:26:17 by eramanit         ###   ########.fr       */
+/*   Updated: 2025/04/14 23:59:53 by eramanit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void test_c(void)
 
 	c = 0;
 	format = "le caractere \033[35m\"%c %c \"\033[00m\n";
-	// puts("the printf:");
-	// l1 = printf(format, c, c + '0');
-	// puts("the ft_printf:");
-	// l2 = ft_printf(format, c, c + '0');
-	// test_len(l1, l2);
+	puts("the printf:");
+	l1 = printf(format, c, c + '0');
+	puts("the ft_printf:");
+	l2 = ft_printf(format, c, c + '0');
+	test_len(l1, l2);
 
 	// l1 = printf(" %c |", '0');
 	// l2 = ft_printf(" %c |", '0');
