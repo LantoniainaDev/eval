@@ -6,7 +6,7 @@
 #    By: eramanit <eramanit@student.42antananari    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/29 07:46:30 by eramanit          #+#    #+#              #
-#    Updated: 2025/04/14 23:58:06 by eramanit         ###   ########.fr        #
+#    Updated: 2025/05/10 10:21:56 by eramanit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAG	=	-Wall -Wextra -Werror
 
 SRC		=	main.c test_*.c
 
-FT_P	=	../../printf42/
+FT_P	=	../../ft_printf/
 
 all		:	$(NAME)
 
